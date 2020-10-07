@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="727.0" prefWidth="1365.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <MenuBar layoutX="-3.0" layoutY="2.0" prefHeight="25.0" prefWidth="1390.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#newFile" text="New" />
+                  <MenuItem mnemonicParsing="false" onAction="#openFile" text="Open" />
+                  <MenuItem mnemonicParsing="false" onAction="#saveFile" text="Save" />
+                  <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#undo" text="Undo" />
+                  <MenuItem mnemonicParsing="false" onAction="#redo" text="Redo" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#cut" text="Cut" />
+                  <MenuItem mnemonicParsing="false" onAction="#copy" text="Copy" />
+                  <MenuItem mnemonicParsing="false" onAction="#paste" text="Paste" />
+                  <MenuItem mnemonicParsing="false" text="Select All" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Search">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#Find" text="Find" />
+                  <MenuItem mnemonicParsing="false" onAction="#findnext" text="Find Next" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#Replace" text="Replace" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Format">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ChangeFont" text="Font" />
+                  <MenuItem mnemonicParsing="false" onAction="#changeFontColor" text="Font Color" />
+                  <SeparatorMenuItem mnemonicParsing="false" />
+                  <MenuItem mnemonicParsing="false" onAction="#changeBgColor" text="Background Color" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Compile">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#compileJava" text="Compile Java" />
+                  <MenuItem mnemonicParsing="false" onAction="#compileC" text="Compile C" />
+                  <MenuItem mnemonicParsing="false" onAction="#compileCpp" text="Compile C++" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Run">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#Runjava" text="Run Java" />
+                  <MenuItem mnemonicParsing="false" onAction="#RunC" text="Run C" />
+                  <MenuItem mnemonicParsing="false" onAction="#RunCpp" text="Run C++" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="About">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#aboutUs" text="About Us" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <TextArea fx:id="editTax" layoutX="8.0" layoutY="25.0" prefHeight="472.0" prefWidth="1348.0" style="-fx-control-inner-background: #2B2B2B;" />
+      <TextArea fx:id="compileText" editable="false" focusTraversable="false" layoutX="8.0" layoutY="508.0" prefHeight="190.0" prefWidth="1348.0" style="-fx-control-inner-background: #2B2B2B;">
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextArea>
+      <Separator layoutY="496.0" prefHeight="14.0" prefWidth="1365.0" />
+   </children>
+</AnchorPane>
